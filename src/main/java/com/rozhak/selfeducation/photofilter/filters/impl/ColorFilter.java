@@ -23,8 +23,4 @@ public class ColorFilter implements Filter {
 		return res;
 
 	}
-	public static Predicate<Integer> isBigger(Integer than) {
-		return i -> i > than;
-	}
-
 }
