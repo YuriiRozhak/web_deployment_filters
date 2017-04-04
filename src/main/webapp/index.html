@@ -1,34 +1,18 @@
 <html>
 <head>
-	<script type="text/javascript">
-	function readURL(input) {
+<script src="jquery-3.2.0.min.js"></script>
 
-	    if (input.files && input.files[0]) {
-	        var reader = new FileReader();
-
-	        reader.onload = function (e) {
-	            $('#blah').attr('src', e.target.result);
-	        }
-
-	        reader.readAsDataURL(input.files[0]);
-	    }
-	}
-
-	$("#imgInp").change(function(){
-	    readURL(this);
-	});
-    </script>
 </head>
 <body>
-	<h1>File Upload with Jersey</h1>
+	<h1>File Filter</h1>
 
 	<form action="rest/file/filter" method="post"
 		enctype="multipart/form-data">
 
 		<p>
-			Select a file : <input type="file" name="file" id="imgInp"  size="45" />
+			Select a file : <input type="file" required name="file"  size="45" />
 		</p>
-		<select name="filterName">
+		<select required name="filterName">
 			<option>SEPIA</option>
 			<option>BLACK_WHITE</option>
 			<option>RGB_RED</option>
@@ -37,9 +21,8 @@
 			<option>INVERT_FILTER</option>
 			<option>COLOR_FILTER</option>
 		</select>
-		<input type="submit" value="Upload It" />
+		<input type="submit"  value="Upload It" />
 	</form>
-	<img id="blah" src="#" alt="your image" />
 
 </body>
 </html>
