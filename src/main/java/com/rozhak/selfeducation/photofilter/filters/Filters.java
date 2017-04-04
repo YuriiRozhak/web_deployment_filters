@@ -1,5 +1,5 @@
 package com.rozhak.selfeducation.photofilter.filters;
 
 public enum Filters {
-	SEPIA, BLACK_WHITE,RGB_RED,RGB_BLUE,RGB_GREEN;
+	SEPIA, BLACK_WHITE,RGB_RED,RGB_BLUE,RGB_GREEN, INVERT_FILTER, COLOR_FILTER;
 }

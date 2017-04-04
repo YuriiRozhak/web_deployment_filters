@@ -4,7 +4,9 @@ import java.util.Optional;
 
 import com.rozhak.selfeducation.photofilter.filters.impl.BlackWhiteFilter;
 import com.rozhak.selfeducation.photofilter.filters.impl.BlueFilter;
+import com.rozhak.selfeducation.photofilter.filters.impl.ColorFilter;
 import com.rozhak.selfeducation.photofilter.filters.impl.GreenFilter;
+import com.rozhak.selfeducation.photofilter.filters.impl.InvertFilter;
 import com.rozhak.selfeducation.photofilter.filters.impl.RedFilter;
 import com.rozhak.selfeducation.photofilter.filters.impl.Sepia;
 
@@ -33,6 +35,15 @@ public class FilterFactory {
 			FilterGetter<BlueFilter> rgbBlueFilter = BlueFilter::new;
 			filter = rgbBlueFilter.getFilter();
 			break;
+		case INVERT_FILTER:
+			FilterGetter<InvertFilter> invertFilter = InvertFilter::new;
+			filter = invertFilter.getFilter();
+			break;
+		case COLOR_FILTER:
+			FilterGetter<ColorFilter> colorFilter = ColorFilter::new;
+			filter = colorFilter.getFilter();
+			break;
+			
 		}
 
 		return Optional.ofNullable(filter);
