@@ -8,7 +8,7 @@ import com.rozhak.selfeducation.photofilter.filters.impl.ColorFilter;
 import com.rozhak.selfeducation.photofilter.filters.impl.GreenFilter;
 import com.rozhak.selfeducation.photofilter.filters.impl.InvertFilter;
 import com.rozhak.selfeducation.photofilter.filters.impl.RedFilter;
-import com.rozhak.selfeducation.photofilter.filters.impl.Sepia;
+import com.rozhak.selfeducation.photofilter.filters.impl.SepiaFilter;
 
 public class FilterFactory {
 
@@ -16,7 +16,7 @@ public class FilterFactory {
 		Filter filter = null;
 		switch (filtername) {
 		case SEPIA:
-			FilterGetter<Sepia> sepia = Sepia::new;
+			FilterGetter<SepiaFilter> sepia = SepiaFilter::new;
 			filter = sepia.getFilter();
 			break;
 		case BLACK_WHITE:
@@ -27,11 +27,11 @@ public class FilterFactory {
 			FilterGetter<RedFilter> rgbRedFilter = RedFilter::new;
 			filter = rgbRedFilter.getFilter();
 			break;
-		case RGB_BLUE:
+		case RGB_GREEN:
 			FilterGetter<GreenFilter> rgbGreenFilter = GreenFilter::new;
 			filter = rgbGreenFilter.getFilter();
 			break;
-		case RGB_GREEN:
+		case RGB_BLUE:
 			FilterGetter<BlueFilter> rgbBlueFilter = BlueFilter::new;
 			filter = rgbBlueFilter.getFilter();
 			break;
