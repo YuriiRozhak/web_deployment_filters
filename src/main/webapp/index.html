@@ -1,7 +1,5 @@
 <html>
 <head>
-<script src="jquery-3.2.0.min.js"></script>
-
 </head>
 <body>
 	<h1>File Filter</h1>
@@ -10,7 +8,7 @@
 		enctype="multipart/form-data">
 
 		<p>
-			Select a file : <input type="file" required name="file"  size="45" />
+			Select a file : <input type="file" accept="image/*" required name="file"  size="45" />
 		</p>
 		<select required name="filterName">
 			<option>SEPIA</option>
@@ -21,7 +19,7 @@
 			<option>INVERT_FILTER</option>
 			<option>COLOR_FILTER</option>
 		</select>
-		<input type="submit"  value="Upload It" />
+		<input type="submit"  value="Process image" />
 	</form>
 
 </body>
